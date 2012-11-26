@@ -17,5 +17,8 @@ Vagrant::Config.run do |config|
       puppet.manifests_path = "puppet"
       puppet.manifest_file  = "app.pp"
       puppet.module_path    = "puppet/modules"
+      puppet.facter         = {
+                                "vhost" => $vhost
+                              }
   end
 end
