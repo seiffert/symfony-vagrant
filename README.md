@@ -5,14 +5,14 @@ projects.
 
 ## Setup
 
--   Install vagrant on your system
-    See [http://vagrantup.com](http://vagrantup.com/v1/docs/getting-started/index.html)
+-   Install vagrant on your system  
+    see [vagrantup.com](http://vagrantup.com/v1/docs/getting-started/index.html)
 
--   Get a base box with puppet support.
-    See [http://vagrantup.com/v1/docs/getting-started/boxes.html]
+-   Get a base box with puppet support  
+    see [vagrantup.com docs](http://vagrantup.com/v1/docs/getting-started/boxes.html)
 
--   Install composer on your system
-    see [http://getcomposer.org](http://getcomposer.org/doc/00-intro.md)
+-   Install composer on your system  
+    see [getcomposer.org](http://getcomposer.org/doc/00-intro.md)
 
 -   Create a new project from this template:
     ```bash
@@ -32,10 +32,10 @@ projects.
 
             $base_box = "ubuntu-server-i386"
         ```
-    -   execute "vagrant up" in the directory vagrant.
+    -   Execute "vagrant up" in the directory vagrant.
 
--   Add an entry in your `/etc/hosts` file for the selected IP
-    If you configured `$vhost = "test"` in the personalization file, the system will be made available at [http://test.dev]
+-   Add an entry in your `/etc/hosts` file for the selected IP  
+    If you configured `$vhost = "test"` in the personalization file, the virtual host will be available at [http://test.dev](http://test.dev)
 
     Example:
 
