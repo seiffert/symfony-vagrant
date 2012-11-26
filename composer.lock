@@ -1,5 +1,5 @@
 {
-    "hash": "eb0325f9a4ed79950538a3c9b77bde65",
+    "hash": "412ecea07d5b73183fcc5ebf4528576f",
     "packages": [
         {
             "name": "doctrine/common",
@@ -813,7 +813,7 @@
 
     ],
     "minimum-stability": "dev",
-    "stability-flags": [
-
-    ]
+    "stability-flags": {
+        "twig/extensions": 20
+    }
 }
