@@ -1,5 +1,5 @@
 {
-    "hash": "412ecea07d5b73183fcc5ebf4528576f",
+    "hash": "4b2299bd20d8290c46085c7348604487",
     "packages": [
         {
             "name": "doctrine/common",
@@ -471,27 +471,27 @@
         },
         {
             "name": "sensio/distribution-bundle",
-            "version": "2.1.x-dev",
+            "version": "dev-master",
             "target-dir": "Sensio/Bundle/DistributionBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensio/SensioDistributionBundle",
-                "reference": "25dcc74a7f31eaacf53a407f024183345c6c4804"
+                "reference": "1ee7c3e9128c939c2ff6efaa41ce323e1b117083"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/sensio/SensioDistributionBundle/archive/25dcc74a7f31eaacf53a407f024183345c6c4804.zip",
-                "reference": "25dcc74a7f31eaacf53a407f024183345c6c4804",
+                "url": "https://github.com/sensio/SensioDistributionBundle/archive/1ee7c3e9128c939c2ff6efaa41ce323e1b117083.zip",
+                "reference": "1ee7c3e9128c939c2ff6efaa41ce323e1b117083",
                 "shasum": ""
             },
             "require": {
-                "symfony/framework-bundle": "2.1.*"
+                "symfony/framework-bundle": "2.2.*"
             },
-            "time": "2012-11-19 11:18:52",
+            "time": "2012-11-19 11:19:32",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.1.x-dev"
+                    "dev-master": "2.2.x-dev"
                 }
             },
             "installation-source": "source",
@@ -517,33 +517,36 @@
         },
         {
             "name": "sensio/generator-bundle",
-            "version": "2.1.x-dev",
+            "version": "dev-master",
             "target-dir": "Sensio/Bundle/GeneratorBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensio/SensioGeneratorBundle",
-                "reference": "7efe50d35818a2ba72a7a05e40155b4789e5c3d9"
+                "reference": "f9684874ee5f9dcbab9b6933467c1c40b9ce27c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/sensio/SensioGeneratorBundle/archive/7efe50d35818a2ba72a7a05e40155b4789e5c3d9.zip",
-                "reference": "7efe50d35818a2ba72a7a05e40155b4789e5c3d9",
+                "url": "https://github.com/sensio/SensioGeneratorBundle/archive/f9684874ee5f9dcbab9b6933467c1c40b9ce27c0.zip",
+                "reference": "f9684874ee5f9dcbab9b6933467c1c40b9ce27c0",
                 "shasum": ""
             },
             "require": {
-                "symfony/framework-bundle": "2.1.*",
-                "symfony/console": "2.1.*"
+                "symfony/framework-bundle": "2.2.*",
+                "symfony/console": "2.2.*"
             },
             "require-dev": {
-                "symfony/doctrine-bridge": "2.1.*",
                 "doctrine/orm": ">=2.1,<2.4-dev",
-                "twig/twig": ">=1.8,<2.0-dev"
+                "twig/twig": ">=1.8,<2.0-dev",
+                "symfony/doctrine-bridge": "2.2.*"
             },
-            "time": "2012-11-19 16:10:57",
+            "suggest": {
+                "doctrine/doctrine-bundle": "to generate entities and their crud controller"
+            },
+            "time": "2012-11-19 16:11:10",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.1.x-dev"
+                    "dev-master": "2.2.x-dev"
                 }
             },
             "installation-source": "source",
@@ -620,21 +623,21 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "2.1.x-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "git://github.com/symfony/symfony.git",
-                "reference": "ed6a345162bbfcae9b23ddbd0ec47b295832d9eb"
+                "reference": "fae3e35ef5bec91483c93bc2d84278926cdf0dba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/symfony/archive/ed6a345162bbfcae9b23ddbd0ec47b295832d9eb.zip",
-                "reference": "ed6a345162bbfcae9b23ddbd0ec47b295832d9eb",
+                "url": "https://github.com/symfony/symfony/archive/fae3e35ef5bec91483c93bc2d84278926cdf0dba.zip",
+                "reference": "fae3e35ef5bec91483c93bc2d84278926cdf0dba",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3",
                 "doctrine/common": ">2.2,<2.4-dev",
+                "php": ">=5.3.3",
                 "twig/twig": ">=1.9.1,<2.0-dev"
             },
             "replace": {
@@ -669,28 +672,35 @@
                 "symfony/templating": "self.version",
                 "symfony/translation": "self.version",
                 "symfony/validator": "self.version",
-                "symfony/yaml": "self.version"
+                "symfony/yaml": "self.version",
+                "symfony/stopwatch": "self.version"
             },
             "require-dev": {
-                "doctrine/dbal": ">=2.2,<2.4-dev",
-                "doctrine/orm": ">=2.2.3,<2.4-dev",
                 "doctrine/data-fixtures": "1.0.*",
                 "propel/propel1": "dev-master",
+                "doctrine/dbal": ">=2.2,<2.4-dev",
+                "doctrine/orm": ">=2.2.3,<2.4-dev",
                 "monolog/monolog": "1.*"
             },
-            "time": "2012-11-26 10:27:20",
+            "suggest": {
+                "doctrine/data-fixtures": "1.0.*"
+            },
+            "time": "2012-11-25 10:49:19",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.1-dev"
+                    "dev-master": "2.2-dev"
                 }
             },
             "installation-source": "source",
             "autoload": {
                 "psr-0": {
-                    "Symfony": "src/",
-                    "SessionHandlerInterface": "src/Symfony/Component/HttpFoundation/Resources/stubs"
-                }
+                    "Symfony\\": "src/"
+                },
+                "classmap": [
+                    "src/Symfony/Component/HttpFoundation/Resources/stubs",
+                    "src/Symfony/Component/Locale/Resources/stubs"
+                ]
             },
             "license": [
                 "MIT"
@@ -813,7 +823,7 @@
 
     ],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "twig/extensions": 20
-    }
+    "stability-flags": [
+
+    ]
 }
