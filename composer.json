@@ -1,6 +1,7 @@
 {
     "name": "seiffert/symfony-vagrant",
     "description": "This is a project template which enables you to get Symfony2 projects up and running on a Vagrant VM really quickly.",
+    "version": "2.2-BETA1",
     "autoload": {
         "psr-0": { "": "src/" }
     },
