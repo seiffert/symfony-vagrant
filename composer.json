@@ -1,7 +1,7 @@
 {
     "name": "seiffert/symfony-vagrant",
     "description": "This is a project template which enables you to get Symfony2 projects up and running on a Vagrant VM really quickly.",
-    "version": "2.1-beta1",
+    "version": "2.1-beta2",
     "autoload": {
         "psr-0": { "": "src/" }
     },
@@ -11,7 +11,6 @@
         "doctrine/orm": ">=2.2.3,<2.4-dev",
         "doctrine/doctrine-bundle": "1.0.*",
         "doctrine/doctrine-fixtures-bundle": "*",
-        "twig/extensions": "1.0.*@dev",
         "symfony/monolog-bundle": "2.1.*",
         "sensio/distribution-bundle": "2.1.*",
         "sensio/generator-bundle": "2.1.*"
