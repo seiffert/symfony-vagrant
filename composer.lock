@@ -1,5 +1,5 @@
 {
-    "hash": "4b2299bd20d8290c46085c7348604487",
+    "hash": "b16a71fe41dd0bb0344116ff2311dfba",
     "packages": [
         {
             "name": "doctrine/common",
@@ -302,12 +302,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/doctrine/doctrine2.git",
-                "reference": "a3fea32e0e655a1c3e6bd56d3d2147d2c7d27cbd"
+                "reference": "287b29aeaada588923a47e677d6974b023f88fd4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/doctrine/doctrine2/archive/a3fea32e0e655a1c3e6bd56d3d2147d2c7d27cbd.zip",
-                "reference": "a3fea32e0e655a1c3e6bd56d3d2147d2c7d27cbd",
+                "url": "https://github.com/doctrine/doctrine2/archive/287b29aeaada588923a47e677d6974b023f88fd4.zip",
+                "reference": "287b29aeaada588923a47e677d6974b023f88fd4",
                 "shasum": ""
             },
             "require": {
@@ -319,7 +319,7 @@
             "suggest": {
                 "symfony/yaml": "If you want to use YAML Metadata Mapping Driver"
             },
-            "time": "2012-11-25 19:16:21",
+            "time": "2012-11-27 21:26:17",
             "bin": [
                 "bin/doctrine",
                 "bin/doctrine.php"
@@ -627,12 +627,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/symfony/symfony.git",
-                "reference": "fae3e35ef5bec91483c93bc2d84278926cdf0dba"
+                "reference": "1b34ddb6b440c15fcec50afc57f955fbbddb8a81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/symfony/archive/fae3e35ef5bec91483c93bc2d84278926cdf0dba.zip",
-                "reference": "fae3e35ef5bec91483c93bc2d84278926cdf0dba",
+                "url": "https://github.com/symfony/symfony/archive/1b34ddb6b440c15fcec50afc57f955fbbddb8a81.zip",
+                "reference": "1b34ddb6b440c15fcec50afc57f955fbbddb8a81",
                 "shasum": ""
             },
             "require": {
@@ -685,7 +685,7 @@
             "suggest": {
                 "doctrine/data-fixtures": "1.0.*"
             },
-            "time": "2012-11-25 10:49:19",
+            "time": "2012-11-27 13:17:08",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -720,53 +720,6 @@
             "keywords": [
                 "framework"
             ]
-        },
-        {
-            "name": "twig/extensions",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/fabpot/Twig-extensions",
-                "reference": "dcdff02fbac1282e6b8f4d0558cc7e9580105688"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/fabpot/Twig-extensions/archive/dcdff02fbac1282e6b8f4d0558cc7e9580105688.zip",
-                "reference": "dcdff02fbac1282e6b8f4d0558cc7e9580105688",
-                "shasum": ""
-            },
-            "require": {
-                "twig/twig": "1.*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "installation-source": "source",
-            "autoload": {
-                "psr-0": {
-                    "Twig_Extensions_": "lib/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                }
-            ],
-            "description": "Common additional features for Twig that do not directly belong in core",
-            "homepage": "https://github.com/fabpot/Twig-extensions",
-            "keywords": [
-                "debug",
-                "i18n",
-                "text"
-            ],
-            "time": "2012-10-10 17:13:26"
         },
         {
             "name": "twig/twig",
