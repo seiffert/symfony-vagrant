@@ -16,7 +16,7 @@ projects.
 
 -   Create a new project from this template:
     ```bash
-        composer create-project seiffert/symfony-vagrant <project-path>
+        composer create-project seiffert/symfony-vagrant <project-path> --stability="beta"
     ```
 
 -   In your project directory:
