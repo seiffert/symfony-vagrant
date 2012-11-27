@@ -49,7 +49,7 @@ After performing the steps listed above, you will have the following environment
 
 - A running virtual machine with your project on it
 - Your project directory will be mounted as a shared folder in this virtual machine
-- Your project will be accessible via a browser (go to `http://{$vhost}.dev/[app_dev.php])
+- Your project will be accessible via a browser (go to `http://{$vhost}.dev/[app_dev.php]`)
 - You can now start customizing the new virtual machine. In most cases, the machine should correspond to the infrastructure your production server(s) provide.
 
 ## Installed Bundles
