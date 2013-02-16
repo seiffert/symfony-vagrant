@@ -3,6 +3,8 @@
 This project provides a very slim Symfony2 edition with a vagrant/puppet support. It can be used as template for new
 projects.
 
+[![Build Status](https://travis-ci.org/seiffert/symfony-vagrant.png?branch=master)](https://travis-ci.org/seiffert/symfony-vagrant)
+
 ## Setup
 
 -   Install vagrant on your system  
