@@ -7,6 +7,8 @@ load personalization
 Vagrant::Config.run do |config|
   config.vm.box = $base_box
 
+  config.vm.host_name = $vhost + ".dev"
+
   config.vm.network :hostonly, $ip
 
   config.vm.share_folder $vhost, "/srv/www/vhosts/" + $vhost + ".dev", "../", :nfs => $use_nfs

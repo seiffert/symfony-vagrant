@@ -7,13 +7,16 @@ projects.
 
 ## Setup
 
--   Install vagrant on your system  
+-   Install vagrant on your system
     see [vagrantup.com](http://vagrantup.com/v1/docs/getting-started/index.html)
 
--   Get a base box with puppet support  
+-   Install vagrant-hostmaster on your system
+    see [mosaicxm/vagrant-hostmaster](https://github.com/mosaicxm/vagrant-hostmaster#installation)
+
+-   Get a base box with puppet support
     see [vagrantup.com docs](http://vagrantup.com/v1/docs/getting-started/boxes.html)
 
--   Install composer on your system  
+-   Install composer on your system
     see [getcomposer.org](http://getcomposer.org/doc/00-intro.md)
 
 -   Create a new project from this template:
@@ -35,15 +38,6 @@ projects.
             $base_box = "ubuntu-server-i386"
         ```
     -   Execute "vagrant up" in the directory vagrant.
-
--   Add an entry to your `/etc/hosts` file for the selected IP
-    If you configured `$vhost = "test"` in the personalization file, the virtual host will be available at [http://test.dev](http://test.dev)
-
-    Example:
-
-    ```
-        192.168.10.42   test.dev
-    ```
 
 ## Infrastructure
 
