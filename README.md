@@ -4,6 +4,7 @@ This project provides a very slim Symfony2 edition with a vagrant/puppet support
 projects.
 
 2.2 (master): [![Dependencies](http://dependency.me/repository/image/seiffert/symfony-vagrant/master)](http://dependency.me/repository/branche/seiffert/symfony-vagrant/master)
+
 2.1: [![Dependencies](http://dependency.me/repository/image/seiffert/symfony-vagrant/2.1)](http://dependency.me/repository/branche/seiffert/symfony-vagrant/2.1)
 
 ## Setup
