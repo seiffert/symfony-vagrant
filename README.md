@@ -3,6 +3,8 @@
 This project provides a very slim Symfony2 edition with a vagrant/puppet support. It can be used as template for new
 projects.
 
+[![Dependencies](http://dependency.me/repository/image/seiffert/symfony-vagrant/master)](http://dependency.me/repository/branche/seiffert/symfony-vagrant/master)
+
 ## Setup
 
 -   Install vagrant on your system  
