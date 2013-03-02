@@ -3,11 +3,15 @@ class app::webserver {
         ensure => latest,
     }
 
+    service {"apache2":
+        ensure => stopped,
+    }
+
     service {"nginx":
         ensure => running,
         hasrestart => true,
         hasstatus => true,
-        require => Package["nginx"],
+        require => [Package["nginx"], Service["apache2"]],
     }
 
     file {"/etc/nginx/vhosts.d":
