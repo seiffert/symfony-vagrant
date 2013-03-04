@@ -1,13 +1,19 @@
 class app::webserver {
     package {"nginx":
         ensure => latest,
+        require => Class['apt']
+    }
+
+    service {"apache2":
+        ensure => stopped,
+        require => Package['php5-fpm']
     }
 
     service {"nginx":
         ensure => running,
         hasrestart => true,
         hasstatus => true,
-        require => Package["nginx"],
+        require => [Package["nginx"], Service['apache2'], Service['php5-fpm']],
     }
 
     file {"/etc/nginx/vhosts.d":

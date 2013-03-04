@@ -1,7 +1,20 @@
 class app::php {
-    package {["php5", "php5-cli", "php5-dev", "php5-fpm", "php-apc", "php5-mysql"]:
+
+    case $osfamily {
+        'debian' : {$installOptions = {"-t" => "php54"}}
+        default  : {$installOptions = {}}
+    }
+
+    package {["php5", "php5-cli", "php5-dev", "php5-fpm", "php5-mysql", "php5-apc"]:
         ensure => present,
-        notify => Service["nginx"],
+        notify => [Service["nginx"]],
+        require => Apt::Source['php54'],
+        install_options => $installOptions
+    }
+
+    file {["/run", "/run/shm"]:
+        ensure => directory,
+        recurse => true
     }
 
     file {"/etc/php5/fpm/pool.d":
@@ -24,7 +37,24 @@ class app::php {
         ensure => running,
         hasrestart => true,
         hasstatus => true,
-        require => [Package[php5-fpm]],
+        require => [Package[php5-fpm], Service['apache2']],
+    }
+
+    augeas { "php.ini.cli":
+      notify  => [Service['nginx'], Service['php5-fpm']],
+      require => Package["php5-cli"],
+      context => "/files/etc/php5/cli/php.ini/Date",
+      changes => [
+        "set date.timezone GB",
+      ];
+    }
+    augeas { "php.ini.fpm":
+      notify  => [Service['nginx'], Service['php5-fpm']],
+      require => Package['php5-fpm'],
+      context => "/files/etc/php5/fpm/php.ini/Date",
+      changes => [
+        "set date.timezone GB",
+      ];
     }
 
     exec {"clear-symfony-cache":
