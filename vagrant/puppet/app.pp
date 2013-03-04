@@ -9,9 +9,12 @@ if $osfamily == 'debian' {
     apt::source {"php54":
         location => "http://packages.dotdeb.org",
         release => 'squeeze-php54',
-        repos => "all"
+        repos => "all",
+        before => Anchor['after_apt']
     }
 }
+
+anchor { 'after_apt': }
 
 host { 'localhost':
     ip => '127.0.0.1',

@@ -8,7 +8,7 @@ class app::php {
     package {["php5", "php5-cli", "php5-dev", "php5-fpm", "php5-mysql", "php5-apc"]:
         ensure => present,
         notify => [Service["nginx"]],
-        require => Apt::Source['php54'],
+        require => Anchor['after_apt'],
         install_options => $installOptions
     }
 
