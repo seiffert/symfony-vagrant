@@ -6,7 +6,8 @@ class app::tools {
               "patch",
               "git",
               "vim",
-              "build-essential"]:
+              "build-essential",
+              "augeas-tools"]:
         ensure => present,
     }
 

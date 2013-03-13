@@ -9,3 +9,6 @@ $use_nfs = true
 
 # Base box name
 $base_box = ""
+
+# The default timezone for php.ini
+$time_zone = "GB"

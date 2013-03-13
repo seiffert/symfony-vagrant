@@ -1,6 +1,20 @@
 Exec { path => ['/usr/local/bin', '/opt/local/bin', '/usr/bin', '/usr/sbin', '/bin', '/sbin'], logoutput => true }
-Package { require => Exec['apt_update'], }
-exec {"apt_update": command => '/usr/bin/apt-get update', }
+
+class {"apt":
+    always_apt_update => true,
+    disable_keys => true
+}
+
+if $osfamily == 'debian' {
+    apt::source {"php54":
+        location => "http://packages.dotdeb.org",
+        release => 'squeeze-php54',
+        repos => "all",
+        before => Anchor['after_apt']
+    }
+}
+
+anchor { 'after_apt': }
 
 host { 'localhost':
     ip => '127.0.0.1',
