@@ -7,7 +7,7 @@ class app::php {
 
     package {["php5", "php5-cli", "php5-dev", "php5-fpm", "php5-mysql", "php5-apc"]:
         ensure => present,
-        notify => [Service["nginx"]],
+        notify => Service["nginx"],
         require => Anchor['after_apt'],
         install_options => $installOptions
     }
@@ -21,7 +21,7 @@ class app::php {
         ensure => directory,
         owner => root,
         group => root,
-        require => [Package["php5-fpm"]],
+        require => Package["php5-fpm"],
     }
 
     file {"/etc/php5/fpm/pool.d/$vhost.conf":
@@ -45,7 +45,7 @@ class app::php {
       require => Package["php5-cli"],
       context => "/files/etc/php5/cli/php.ini/Date",
       changes => [
-        "set date.timezone GB",
+        "set date.timezone $time_zone",
       ];
     }
     augeas { "php.ini.fpm":
@@ -53,7 +53,7 @@ class app::php {
       require => Package['php5-fpm'],
       context => "/files/etc/php5/fpm/php.ini/Date",
       changes => [
-        "set date.timezone GB",
+        "set date.timezone $time_zone",
       ];
     }
 
