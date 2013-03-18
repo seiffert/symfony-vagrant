@@ -7,6 +7,8 @@ load personalization
 Vagrant::Config.run do |config|
   config.vm.box = $base_box
 
+  config.vm.host_name = $vhost + ".dev"
+
   config.vm.network :hostonly, $ip
 
   config.vm.share_folder $vhost, "/srv/www/vhosts/" + $vhost + ".dev", "../", :nfs => $use_nfs
@@ -18,7 +20,8 @@ Vagrant::Config.run do |config|
       puppet.manifest_file  = "app.pp"
       puppet.module_path    = "puppet/modules"
       puppet.facter         = {
-                                "vhost" => $vhost
+                                "vhost" => $vhost,
+                                "webserver" => $webserver
                               }
   end
 end

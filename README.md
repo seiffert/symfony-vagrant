@@ -3,6 +3,8 @@
 This project provides a very slim Symfony2 edition with a vagrant/puppet support. It can be used as template for new
 projects.
 
+[![Build Status](https://travis-ci.org/seiffert/symfony-vagrant.png?branch=master)](https://travis-ci.org/seiffert/symfony-vagrant)
+
 ## Setup
 
 -   Install vagrant on your system  
@@ -36,12 +38,6 @@ projects.
 
 -   Add an entry to your `/etc/hosts` file for the selected IP
     If you configured `$vhost = "test"` in the personalization file, the virtual host will be available at [http://test.dev](http://test.dev)
-
-    Example:
-
-    ```
-        192.168.10.42   test.dev
-    ```
 
 ## Infrastructure
 
