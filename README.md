@@ -7,13 +7,13 @@ projects.
 
 ## Setup
 
--   Install vagrant on your system  
+-   Install vagrant on your system
     see [vagrantup.com](http://vagrantup.com/v1/docs/getting-started/index.html)
 
--   Get a base box with puppet support  
+-   Get a base box with puppet support
     see [vagrantup.com docs](http://vagrantup.com/v1/docs/getting-started/boxes.html)
 
--   Install composer on your system  
+-   Install composer on your system
     see [getcomposer.org](http://getcomposer.org/doc/00-intro.md)
 
 -   Create a new project from this template:
@@ -33,6 +33,8 @@ projects.
             $use_nfs = true
 
             $base_box = "ubuntu-server-i386"
+
+            $webserver = "apache2"
         ```
     -   Execute "vagrant up" in the directory vagrant.
 
