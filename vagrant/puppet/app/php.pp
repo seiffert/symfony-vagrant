@@ -1,7 +1,15 @@
 class app::php {
-    package {["php5", "php5-cli", "php5-dev", "php-apc", "php5-mysql"]:
+
+    case $osfamily {
+        'debian' : {$installOptions = {"-t" => "php54"}}
+        default  : {$installOptions = {}}
+    }
+
+    package {["php5", "php5-cli", "php5-dev", "php5-fpm", "php5-mysql", "php5-apc"]:
         ensure => present,
         notify => Service[$webserverService],
+        require => Anchor['after_apt'],
+        install_options => $installOptions
     }
 
     exec {"clear-symfony-cache":

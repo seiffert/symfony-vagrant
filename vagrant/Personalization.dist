@@ -15,3 +15,6 @@ $base_box = ""
 #
 # Note: nginx implies the use of php-fpm
 $webserver = "nginx"
+
+# The default timezone for php.ini
+$time_zone = "GB"
