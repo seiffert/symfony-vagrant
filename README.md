@@ -34,7 +34,7 @@ projects.
 
             $base_box = "ubuntu-server-i386"
 
-            $webserver = "apache2"
+            $webserver = "nginx"
         ```
     -   Execute "vagrant up" in the directory vagrant.
 

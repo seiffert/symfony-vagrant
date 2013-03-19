@@ -1,10 +1,4 @@
 class app::php {
-    $webserverService = $webserver ? {
-        apache2 => 'httpd',
-        nginx => 'nginx',
-        default => 'nginx'
-    }
-
     package {["php5", "php5-cli", "php5-dev", "php-apc", "php5-mysql"]:
         ensure => present,
         notify => Service[$webserverService],
