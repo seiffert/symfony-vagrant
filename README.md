@@ -36,6 +36,8 @@ projects.
             $use_nfs = true
 
             $base_box = "ubuntu-server-i386"
+
+            $webserver = "nginx"
         ```
     -   Execute "vagrant up" in the directory vagrant.
 

@@ -16,11 +16,17 @@ if $osfamily == 'debian' {
 
 anchor { 'after_apt': }
 
+$webserverService = $webserver ? {
+    apache2 => 'httpd',
+    nginx => 'nginx',
+    default => 'nginx'
+}
+
 host { 'localhost':
     ip => '127.0.0.1',
     host_aliases => ["localhost.localdomain",
                      "localhost4", "localhost4.localdomain4", "$vhost.dev"],
-    notify => Service['nginx'],
+    notify => Service[$webserverService],
 }
 
 class { "mysql": }
