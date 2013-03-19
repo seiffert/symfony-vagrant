@@ -2,11 +2,17 @@ Exec { path => ['/usr/local/bin', '/opt/local/bin', '/usr/bin', '/usr/sbin', '/b
 Package { require => Exec['apt_update'], }
 exec {"apt_update": command => '/usr/bin/apt-get update', }
 
+$webserverService = $webserver ? {
+    apache2 => 'httpd',
+    nginx => 'nginx',
+    default => 'nginx'
+}
+
 host { 'localhost':
     ip => '127.0.0.1',
     host_aliases => ["localhost.localdomain",
                      "localhost4", "localhost4.localdomain4", "$vhost.dev"],
-    notify => Service['nginx'],
+    notify => Service[$webserverService],
 }
 
 class { "mysql": }

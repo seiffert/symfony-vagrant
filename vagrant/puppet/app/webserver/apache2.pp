@@ -2,8 +2,8 @@ class app::webserver::apache2 {
     class { "apache": }
     class { "apache::mod::php": }
 
-    service { "nginx":
-        ensure => stopped,
+    package { "nginx":
+        ensure => purged,
     }
 
     file {"/etc/apache2/sites-enabled/000-default":
@@ -14,7 +14,7 @@ class app::webserver::apache2 {
     file {"/etc/apache2/sites-enabled/$vhost":
         ensure => present,
         content => template("/vagrant/files/etc/apache2/sites-available/app.dev"),
-        require => Package["apache2"],
+        require => Package["httpd"],
         notify => Service["httpd"],
     }
 
