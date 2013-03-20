@@ -1,6 +1,7 @@
 class app::webserver::nginx {
     package {"nginx":
         ensure => latest,
+        require => Anchor['after_apt']
     }
 
     package {"httpd":

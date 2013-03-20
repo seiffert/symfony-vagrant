@@ -1,6 +1,7 @@
 class app::php::fpm {
     package { "php5-fpm":
         ensure => present,
+        require => Anchor['after_apt'],
         notify => Service[$webserver],
     }
 
